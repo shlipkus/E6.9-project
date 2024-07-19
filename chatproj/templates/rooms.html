@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>MemChat</title>
+</head>
+<body>
+<h1>Комнаты</h1>
+<div id="list-room"></div>
+{% csrf_token %}
+<button id="btn_add">Добавить комнату</button>
+<div id="create"></div>
+<hr>
+<button onclick="window.location = '/'">На главную</button>
+<script src="{% static 'scripts/rooms.js' %}"></script>
+</body>
+</html>

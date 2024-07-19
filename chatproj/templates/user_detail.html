@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MemChat</title>
+</head>
+<body>
+
+<h1>{{user.nickname}}</h1>
+{% if user.avatar %}
+<p><img src="{{ user.avatar.url }}" height="200"></p>
+{% endif %}
+<p><button onclick="window.location = '/private/{{ path }}'">Написать сообщение</button></p>
+<p><button onclick="window.location = '/users/'">Назад</button></p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MemChat</title>
+</head>
+<body>
+<h1>Список пользователей</h1>
+{% for u in ulist %}
+<p><img src="{{u.avatar.url}}" height="20"><a href="{{ u.id }}">{{u.nickname}}</a></p>
+{% endfor %}
+<p><button onclick="window.location = '/'">На главную</button></p>
+</body>
+</html>

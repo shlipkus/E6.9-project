@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MemChat</title>
+</head>
+<body>
+<h1>Ваш профиль</h1>
+{% if avatar %}
+<p><img src="{{ avatar.url }}" height="200"></p>
+{% endif %}
+<p>Логин: {{username}}</p>
+<p>Никнейм: {{nickname}}</p>
+<p><button onclick="window.location.href='edit/'">Редактировать профиль</button></p>
+<p><button onclick="window.location = '/'">На главную</button></p>
+
+</body>
+</html>

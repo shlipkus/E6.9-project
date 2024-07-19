@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <title>MemChat</title>
+</head>
+<body>
+    <h1>Welcome to MemChat!</h1>
+    <p>Вы вошли как {{ user }}</p>
+    {% if user.id != None  %}
+        <p><button onclick="window.location.href = 'logout/'">Выход</button></p>
+        <p><button onclick="window.location.href = '/profile/'">Профиль</button></p>
+    {% else %}
+        <p><button onclick="window.location.href = '/login/'">Вход</button></p>
+    {% endif %}
+    <p><button onclick="window.location.href = '/users/'">Список пользователей.</button></p>
+    <p><button onclick="window.location.href = '/private/'">Личка</button></p>
+    <p><button onclick="window.location.href = '/rooms/'">Групповые чаты</button></p>
+    <script src="{% static 'scripts/app.js' %}"></script>
+</body>
+</html>

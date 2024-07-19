@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MemChat</title>
+</head>
+<body>
+<h1>Список личных сообщений</h1>
+{% if chats %}
+    {% for chat in chats %}
+        {% if chat.user1 == user %}
+        <p><a href="{{ chat.chat_path }}">Чат с {{chat.user2}}.</a></p>
+        {% else %}
+        <p><a href="{{ chat.chat_path }}">Чат с {{chat.user1}}.</a></p>
+        {% endif %}
+    {% endfor %}
+{% endif %}
+<p><button onclick="window.location = '/'">На главную</button></p>
+</body>
+</html>
