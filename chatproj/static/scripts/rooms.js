@@ -51,7 +51,7 @@ function createAddForm() {
                                 });
     })
 }
-console.log(crtBtn)
+
 
 crtBtn.addEventListener('click', () => {
     crtBtn.disabled = true;
